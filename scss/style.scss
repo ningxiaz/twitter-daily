@@ -1,6 +1,36 @@
 /* Customized Styles */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 .text-centered {
   text-align: center;
 }
 
+.newspaper {
+  width: 960px;
+  margin: 20px auto;
+  display: none;
+  padding: 0 10px;
+
+  h1{
+    text-align: center;
+  }
+
+  .column1{
+    float: left;
+    min-width: 500px;
+  }
+
+  .column2{
+    float: right;
+    min-width: 400px;
+  }
+}

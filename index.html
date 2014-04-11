@@ -8,40 +8,48 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-    <div class="row text-centered">
-      <div class="small-12 large-4 large-centered columns">
-        <h1>Twitter Daily</h1>
+    <div class="start">
+      <div class="row text-centered">
+        <div class="small-12 large-4 large-centered columns">
+          <h1>Twitter Daily</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 large-8 large-centered columns">
+          <label>Keywords
+            <input id="keywords" type="text" placeholder="MH370">
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 large-8 large-centered columns">
+          <label>Hashtags
+            <input id="hashtags" type="text" placeholder="#MH370">
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 large-8 large-centered columns">
+          <label>Date
+            <input id="date" type="date" placeholder="">
+          </label>
+        </div>
+      </div>
+
+      <div class="row text-centered">
+        <div class="small-12 large-4 large-centered columns">
+          <a href="#" id="generate" class="button">Generate!</a>
+        </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="small-12 large-8 large-centered columns">
-        <label>Keywords
-          <input type="text" placeholder="MH370">
-        </label>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 large-8 large-centered columns">
-        <label>Hashtags
-          <input type="text" placeholder="#MH370">
-        </label>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="small-12 large-8 large-centered columns">
-        <label>Date
-          <input type="date" placeholder="">
-        </label>
-      </div>
-    </div>
-
-    <div class="row text-centered">
-      <div class="small-12 large-4 large-centered columns">
-        <a href="#" class="button">Generate!</a>
-      </div>
+    <div class="newspaper clearfix">
+      <h1>Twitter Daily</h1>
+      <div class="column1"></div>
+      <div class="column2"></div>
     </div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
