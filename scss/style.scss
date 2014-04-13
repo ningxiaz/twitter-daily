@@ -1,6 +1,12 @@
 /* Typography */
 $title-font: 'Abril Fatface', cursive;
 
+@media print {
+  .no-print, .no-print *{
+    display: none !important;
+  }
+}
+
 /* Customized Styles */
 .clearfix:after {
   visibility: hidden;
@@ -17,6 +23,17 @@ $title-font: 'Abril Fatface', cursive;
   text-align: center;
 }
 
+.title {
+  text-align: center;
+  font-family: $title-font;
+  font-size: 3.75em;
+  line-height: 1.3;
+}
+
+.start {
+  margin-top: 12%;
+}
+
 .toolbar {
   width: 100%;
   min-height: 30px;
@@ -24,25 +41,31 @@ $title-font: 'Abril Fatface', cursive;
   display: none;
   padding: 10px 0;
 
-  .button{
+  .button {
     margin: 0;
     padding-top: 0.8rem;
     padding-right: 1.6rem;
     padding-left: 1.6rem;
     padding-bottom: 0.85rem;
   }
+
+  #ready{
+    float: right;
+  }
 }
 
 .newspaper {
   width: 960px;
-  margin: 20px auto;
+  margin: 0 auto;
   display: none;
   padding: 0 10px;
 
-  h1 {
-    text-align: center;
-    font-family: $title-font;
-    font-size: 3.75em;
+  .subtitle {
+    border-top: 1px #222 solid;
+    border-bottom: 1px #222 solid;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: 10px;
   }
 
   .column-left {
@@ -64,12 +87,14 @@ $title-font: 'Abril Fatface', cursive;
     max-width: 99%;
     min-width: 220px;
     padding: 0;
-    border-radius: 5px;
     margin: 10px 0;
-    border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
-    border-width: 1px;
-    border-style: solid;
+    border-bottom: 1px #999 solid;
     position: static;
     visibility: visible;
+  }
+
+  .column-right .tweet-container{
+    border: none;
+    margin: 5px 0;
   }
 }
