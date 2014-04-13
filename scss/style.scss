@@ -1,3 +1,6 @@
+/* Typography */
+$title-font: 'Abril Fatface', cursive;
+
 /* Customized Styles */
 .clearfix:after {
   visibility: hidden;
@@ -14,23 +17,59 @@
   text-align: center;
 }
 
+.toolbar {
+  width: 100%;
+  min-height: 30px;
+  border-bottom: 1px #ccc solid;
+  display: none;
+  padding: 10px 0;
+
+  .button{
+    margin: 0;
+    padding-top: 0.8rem;
+    padding-right: 1.6rem;
+    padding-left: 1.6rem;
+    padding-bottom: 0.85rem;
+  }
+}
+
 .newspaper {
   width: 960px;
   margin: 20px auto;
   display: none;
   padding: 0 10px;
 
-  h1{
+  h1 {
     text-align: center;
+    font-family: $title-font;
+    font-size: 3.75em;
   }
 
-  .column1{
+  .column-left {
     float: left;
-    min-width: 500px;
+    min-width: 400px;
   }
 
-  .column2{
+  .column-right {
     float: right;
-    min-width: 400px;
+    min-width: 300px;
+  }
+
+  .column1, .column2 {
+    width: 100%;
+  }
+
+  .tweet-container {
+    display: block;
+    max-width: 99%;
+    min-width: 220px;
+    padding: 0;
+    border-radius: 5px;
+    margin: 10px 0;
+    border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
+    border-width: 1px;
+    border-style: solid;
+    position: static;
+    visibility: visible;
   }
 }
