@@ -5,6 +5,7 @@
 $('#generate').click(function(){
   keywords = $('#keywords').val();
   date = $('#date').val();
+  number = $('#number').val();
 
   if(keywords == undefined || keywords == ''){
     keywords = 'MH370';
@@ -14,9 +15,15 @@ $('#generate').click(function(){
     date = '2014-04-01';
   }
 
+  if(number == undefined || number == ''){
+    number = 45;
+  }
+
   $('.start').hide();
+  $('footer').hide();
   $('.newspaper').show();
   $('.toolbar').show();
+  $('.tips').show();
 
   date_tokens = date.split('-');
   year = parseInt(date_tokens[0]);
@@ -33,7 +40,7 @@ $('#generate').click(function(){
   now = Date.now();
   tweets = [];
 
-  url = "http://otter.topsy.com/search.js?q="+keywords+"&allow_lang=en&offset=0&perpage=40&mintime="+mintime+"&maxtime="+maxtime+"&call_timestamp="+now+"&apikey=09C43A9B270A470B8EB8F2946A9369F3&_=1397196936083"
+  url = "http://otter.topsy.com/search.js?q="+keywords+"&allow_lang=en&offset=0&perpage="+number+"&mintime="+mintime+"&maxtime="+maxtime+"&call_timestamp="+now+"&apikey=09C43A9B270A470B8EB8F2946A9369F3&_=1397196936083"
 
   $.getJSON(url + "&callback=?", function(json){
     list = json.response.list
@@ -44,7 +51,9 @@ $('#generate').click(function(){
       tweets.push(id);
     }
 
-    for(i = 0; i < tweets.length/2; i ++){
+    console.log(tweets.length);
+
+    for(i = 0; i < tweets.length/3; i ++){
       url = "https://api.twitter.com/1/statuses/oembed.json?id=" + tweets[i] + "&maxwidth=600";
       $.getJSON(url + "&callback=?", function(json){
         html = json.html;
@@ -52,7 +61,7 @@ $('#generate').click(function(){
       });
     }
 
-    for(i = tweets.length/2; i < tweets.length; i ++){
+    for(i = tweets.length/3; i < tweets.length; i ++){
       url = "https://api.twitter.com/1/statuses/oembed.json?id=" + tweets[i] + "&maxwidth=350&hide_media=true";
       $.getJSON(url + "&callback=?", function(json){
         html = json.html;
@@ -60,18 +69,18 @@ $('#generate').click(function(){
       });
     }
   });
-  
 });
 
-$('#filter').click(function(){
+function filter(){
   $('.tweet-container').hover(function(){
     $(this).css('opacity', 0.6);
     style = {
       'position': 'absolute',
       'display': 'block',
       'opacity': 1,
-      'right': '15px',
-      'bottom': '43px',
+      'right': '44%',
+      'bottom': '50%',
+      'font-size': '24px',
       'color': 'red',
       'cursor': 'pointer',
       'font-weight': 'bold',
@@ -92,7 +101,7 @@ $('#filter').click(function(){
     $(this).css('opacity', 1);
     $(this).contents().find('.remove').remove();
   });
-});
+}
 
 $('#organize').click(function(){
   $('.column1').children('iframe').each(function(){
@@ -146,11 +155,32 @@ $('#organize').click(function(){
   $('.column2').empty();  
   $('.tweet-container').contents().find('.follow-button').remove();
   $('.tweet-container').contents().find('.footer').remove();
+  filter();
 });
 
 $('#ready').click(function(){
   $('.tweet-container').off();
   $('.tweet-container').contents().find('.remove').remove();
+  window.print();
+});
+
+$('#color').click(function(){
+  if($(this).hasClass('bw')){
+    $('.newspaper').addClass('bw');
+    $(this).removeClass('bw');
+    $(this).addClass('color');
+    $(this).text('Back to Color');
+  }
+  else if($(this).hasClass('color')){
+    $('.newspaper').removeClass('bw');
+    $(this).removeClass('color');
+    $(this).addClass('bw');
+    $(this).text('Black & White');
+  }
+});
+
+$('#gotit').click(function(){
+  $('.tips').hide();
 });
 
 $(document).foundation();

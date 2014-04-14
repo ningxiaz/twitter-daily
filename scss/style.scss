@@ -1,10 +1,20 @@
 /* Typography */
 $title-font: 'Abril Fatface', cursive;
+$serif: 'Vollkorn', serif;
+$sans: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+/* Colors */
+$dark-grey: #222;
+$light-grey: #666;
 
 @media print {
   .no-print, .no-print *{
     display: none !important;
   }
+}
+
+body{
+  font-family: $serif;
 }
 
 /* Customized Styles */
@@ -26,12 +36,32 @@ $title-font: 'Abril Fatface', cursive;
 .title {
   text-align: center;
   font-family: $title-font;
-  font-size: 3.75em;
+  font-size: 3.75rem;
   line-height: 1.3;
 }
 
 .start {
-  margin-top: 12%;
+  padding-top: 9%;
+
+  .subtitle{
+    color: $light-grey;
+    font-family: $serif;
+    margin-bottom: 30px;
+  }
+
+  label{
+    font-size: 1rem;
+
+    input{
+      margin-top: 5px;
+    }
+  }
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .toolbar {
@@ -40,6 +70,7 @@ $title-font: 'Abril Fatface', cursive;
   border-bottom: 1px #ccc solid;
   display: none;
   padding: 10px 0;
+  background-color: #F7F7F7;
 
   .button {
     margin: 0;
@@ -49,8 +80,39 @@ $title-font: 'Abril Fatface', cursive;
     padding-bottom: 0.85rem;
   }
 
+  #color{
+    float: right;
+    margin-right: 10px;
+  }
+
   #ready{
     float: right;
+  }
+}
+
+.bw{
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.tips{
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.95;
+  padding-top: 10%;
+
+  h1{
+    font-family: $serif;
+  }
+
+  p{
+    font-size: 1.125em;
   }
 }
 
@@ -61,11 +123,12 @@ $title-font: 'Abril Fatface', cursive;
   padding: 0 10px;
 
   .subtitle {
-    border-top: 1px #222 solid;
-    border-bottom: 1px #222 solid;
+    border-top: 1px $dark-grey solid;
+    border-bottom: 1px $dark-grey solid;
     line-height: 1.4;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-family: $sans;
   }
 
   .column-left {
