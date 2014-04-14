@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Daily</title>
+    <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+    <div class="start">
+      <div class="row text-centered">
+        <div class="small-12 large-12 large-centered columns">
+          <h1 class="title">Twitter Daily</h1>
+          <h5 class="subtitle">Make Top Tweets of Each Day into A Newspaper!</h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 large-8 large-centered columns">
+          <h4 class="tip"></h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 large-8 large-centered columns">
+          <label>Keywords
+            <input id="keywords" type="text" placeholder="MH370">
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 large-8 large-centered columns">
+          <label>Date
+            <input id="date" type="date" value="2014-04-01">
+          </label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 large-8 large-centered columns">
+          <label>Number of Tweets
+            <input id="number" type="number" placeholder="45">
+          </label>
+        </div>
+      </div>
+
+      <div class="row text-centered">
+        <div class="small-12 large-4 large-centered columns">
+          <a href="#" id="generate" class="radius button">Generate!</a>
+        </div>
+      </div>      
+    </div>
+
+    <footer>
+      <div class="row text-centered">
+        <div class="small-12 large-12 columns">
+          <p>Check it on <a href="https://github.com/ningxiaz/twitter-daily" target="_blank">Github</a>! Made by Ningxia. Powered by <a href="https://dev.twitter.com/" target="_blank">Twitter</a> and <a href="http://topsy.com/" target="_blank">Topsy</a>.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="toolbar clearfix no-print">
+      <div class="row">
+        <div class="small-12 large-12 columns">
+          <a href="#" id="organize" class="small radius button">Organize</a>
+          <a href="#" id="ready" class="small radius button">Ready To Print</a>
+          <a href="#" id="color" class="small radius button bw">Black & White</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tips">
+      <div class="row text-centered">
+        <div class="small-12 large-8 large-centered columns">
+          <h1>Tips</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="small-12 large-8 large-centered columns">
+          <p>Wait until all tweets are loaded, and then use "Organize" to get tweets in their right place.</p>
+          <p>After organization, you can hover over tweets to delete ones you don't want.</p>
+          <p>You can also choose to turn the newspaper Black & Whilte.</p>
+        </div>
+      </div>
+        
+      <div class="row text-centered">
+        <div class="small-12 large-8 large-centered columns">
+          <a id="gotit" class="radius button">Got it!</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="newspaper clearfix">
+      <h1 class="title">Twitter Daily</h1>
+      <div class="subtitle text-centered">
+        SAN FRANCISCO, <span></span>
+      </div>
+      <div class="column-left"></div>
+      <div class="column-right"></div>
+      <div class="column1"></div>
+      <div class="column2"></div>      
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

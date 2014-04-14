@@ -1,0 +1,176 @@
+/* Typography */
+/* Colors */
+@media print {
+  /* line 11, ../scss/style.scss */
+  .no-print, .no-print * {
+    display: none !important;
+  }
+}
+/* line 16, ../scss/style.scss */
+body {
+  font-family: "Vollkorn", serif;
+}
+
+/* Customized Styles */
+/* line 21, ../scss/style.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 29, ../scss/style.scss */
+* html .clearfix {
+  zoom: 1;
+}
+
+/* IE6 */
+/* line 30, ../scss/style.scss */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+
+/* IE7 */
+/* line 32, ../scss/style.scss */
+.text-centered {
+  text-align: center;
+}
+
+/* line 36, ../scss/style.scss */
+.title {
+  text-align: center;
+  font-family: "Abril Fatface", cursive;
+  font-size: 3.75rem;
+  line-height: 1.3;
+}
+
+/* line 43, ../scss/style.scss */
+.start {
+  padding-top: 9%;
+}
+/* line 46, ../scss/style.scss */
+.start .subtitle {
+  color: #666666;
+  font-family: "Vollkorn", serif;
+  margin-bottom: 30px;
+}
+/* line 52, ../scss/style.scss */
+.start label {
+  font-size: 1rem;
+}
+/* line 55, ../scss/style.scss */
+.start label input {
+  margin-top: 5px;
+}
+
+/* line 61, ../scss/style.scss */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* line 67, ../scss/style.scss */
+.toolbar {
+  width: 100%;
+  min-height: 30px;
+  border-bottom: 1px #ccc solid;
+  display: none;
+  padding: 10px 0;
+  background-color: #F7F7F7;
+}
+/* line 75, ../scss/style.scss */
+.toolbar .button {
+  margin: 0;
+  padding-top: 0.8rem;
+  padding-right: 1.6rem;
+  padding-left: 1.6rem;
+  padding-bottom: 0.85rem;
+}
+/* line 83, ../scss/style.scss */
+.toolbar #color {
+  float: right;
+  margin-right: 10px;
+}
+/* line 88, ../scss/style.scss */
+.toolbar #ready {
+  float: right;
+}
+
+/* line 93, ../scss/style.scss */
+.bw {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/* line 99, ../scss/style.scss */
+.tips {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.95;
+  padding-top: 10%;
+}
+/* line 110, ../scss/style.scss */
+.tips h1 {
+  font-family: "Vollkorn", serif;
+}
+/* line 114, ../scss/style.scss */
+.tips p {
+  font-size: 1.125em;
+}
+
+/* line 119, ../scss/style.scss */
+.newspaper {
+  width: 960px;
+  margin: 0 auto;
+  display: none;
+  padding: 0 10px;
+}
+/* line 125, ../scss/style.scss */
+.newspaper .subtitle {
+  border-top: 1px #222222 solid;
+  border-bottom: 1px #222222 solid;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+/* line 134, ../scss/style.scss */
+.newspaper .column-left {
+  float: left;
+  min-width: 400px;
+}
+/* line 139, ../scss/style.scss */
+.newspaper .column-right {
+  float: right;
+  min-width: 300px;
+}
+/* line 144, ../scss/style.scss */
+.newspaper .column1, .newspaper .column2 {
+  width: 100%;
+}
+/* line 148, ../scss/style.scss */
+.newspaper .tweet-container {
+  display: block;
+  max-width: 99%;
+  min-width: 220px;
+  padding: 0;
+  margin: 10px 0;
+  border-bottom: 1px #999 solid;
+  position: static;
+  visibility: visible;
+}
+/* line 159, ../scss/style.scss */
+.newspaper .column-right .tweet-container {
+  border: none;
+  margin: 5px 0;
+}
