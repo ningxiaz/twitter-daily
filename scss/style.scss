@@ -44,9 +44,13 @@ body{
   padding-top: 9%;
 
   .subtitle{
-    color: $light-grey;
-    font-family: $serif;
-    margin-bottom: 30px;
+    margin: 20px 0;
+
+    h5 {
+      color: $light-grey;
+      font-family: $serif;
+      margin: 3px 0;
+    }
   }
 
   label{
@@ -55,6 +59,10 @@ body{
     input{
       margin-top: 5px;
     }
+  }
+
+  .button {
+    margin-top: 20px;
   }
 }
 
@@ -109,10 +117,15 @@ footer{
 
   h1{
     font-family: $serif;
+    margin: 20px 0;
   }
 
   p{
     font-size: 1.125em;
+  }
+
+  .button{
+    margin: 20px 0;
   }
 }
 

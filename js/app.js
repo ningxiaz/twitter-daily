@@ -5,18 +5,14 @@
 $('#generate').click(function(){
   keywords = $('#keywords').val();
   date = $('#date').val();
-  number = $('#number').val();
+  number = 45;
 
   if(keywords == undefined || keywords == ''){
     keywords = 'MH370';
   }
 
   if(date == undefined || date == ''){
-    date = '2014-04-01';
-  }
-
-  if(number == undefined || number == ''){
-    number = 45;
+    date = '2014-03-14';
   }
 
   $('.start').hide();
@@ -49,9 +45,7 @@ $('#generate').click(function(){
       tokens = permalink.split('/');
       id = tokens[tokens.length - 1];
       tweets.push(id);
-    }
-
-    console.log(tweets.length);
+    }    
 
     for(i = 0; i < tweets.length/3; i ++){
       url = "https://api.twitter.com/1/statuses/oembed.json?id=" + tweets[i] + "&maxwidth=600";
